@@ -1,5 +1,5 @@
-import { NavBar } from './navBar';
-import { LogoBanner } from './logoBanner';
+import { NavBar } from './common/navBar';
+import { LogoBanner } from './common/logoBanner';
 
 interface Props {
 	scrollDirection: string;
@@ -8,15 +8,15 @@ interface Props {
 export const Header = ({ scrollDirection }: Props) => {
 	return (
 		<header
-			className={`flex items-center space-x-12 w-full bg-black z-10${
+			className={`flex items-center space-x-12 w-full fixed top-0 bg-black z-10${
 				scrollDirection === 'up'
-					? ' fixed top-0'
+					? ' transition-transform ease-in duration-200'
 					: scrollDirection === 'down'
-					? ' hidden'
-					: ' fixed top-0'
+					? ' -translate-y-20 transition-transform ease-out duration-200'
+					: ''
 			}`}
 		>
-			<LogoBanner />
+			<LogoBanner height={5} />
 			<NavBar />
 		</header>
 	);

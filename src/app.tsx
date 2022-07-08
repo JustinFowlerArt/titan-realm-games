@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { Header } from './components/header';
 import { Home } from './components/home';
+import { Footer } from './components/footer';
 
 export const App = () => {
 	const [lastScroll, setLastScroll] = useState(0);
@@ -28,9 +29,10 @@ export const App = () => {
 	}, [lastScroll]);
 
 	return (
-		<div className='bg-black text-white'>
+		<div className='bg-gray-900 text-white'>
 			<Header scrollDirection={scrollDirection} />
 			<Home />
+			<Footer />
 		</div>
 	);
 };

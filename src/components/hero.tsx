@@ -1,4 +1,4 @@
-import { LogoCompact } from './logoCompact';
+import { LogoCompact } from './common/logoCompact';
 
 export const Hero = () => {
 	return (
@@ -11,7 +11,7 @@ export const Hero = () => {
 		>
 			<div className='flex flex-col items-center'>
 				<LogoCompact />
-				<p className='text-5xl font-semibold text-light'>
+				<p className='text-5xl font-bold text-titan-light-blue'>
 					Welcome to Titan Realm Games
 				</p>
 			</div>
