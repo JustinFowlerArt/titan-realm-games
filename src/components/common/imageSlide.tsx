@@ -1,20 +1,20 @@
 interface Props {
-	location: string;
-	link: string;
+	slide: {
+		location: string;
+		link: string;
+	};
 }
 
-export const ImageSlide = ({ location, link }: Props) => {
+export const ImageSlide = ({ slide }: Props) => {
 	const styles = {
-		backgroundImage: `url(${location})`,
-		backgroundSize: 'cover',
-		backgroundPosition: 'center',
+		backgroundImage: `url(${slide.location})`,
 	};
 
 	return (
 		<a
-			className='h-72 w-96 transition-all hover:bg-blend-multiply hover:bg-gray-400'
+			className='w-full aspect-[4/3] transition-all bg-cover bg-center hover:bg-blend-multiply hover:bg-gray-400'
 			style={styles}
-			href={link}
+			href={slide.link}
 		></a>
 	);
 };

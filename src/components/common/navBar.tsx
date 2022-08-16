@@ -1,12 +1,22 @@
-export const NavBar = () => {
+import { Link } from '../../data/types';
+
+interface Props {
+	links: Link[];
+}
+
+export const NavBar = ({ links }: Props) => {
 	return (
 		<nav>
-			<ul className='flex space-x-12 text-lg font-semibold text-titan-light-blue'>
-				<a href='#'>Our Games</a>
-				<a href='#'>Our Company</a>
-				<a href='#'>Media</a>
-				<a href='#'>Career</a>
-				<a href='#'>Contact</a>
+			<ul className='flex flex-col items-center p-3 text-lg font-semibold text-titan-light-blue lg:flex-row lg:p-0 xl:space-x-8'>
+				{links?.map(link => (
+					<a
+						className='p-3 hover:text-titan-dark-blue hover:border-titan-dark-blue'
+						key={link.title}
+						href={link.url}
+					>
+						{link.title}
+					</a>
+				))}
 			</ul>
 		</nav>
 	);
