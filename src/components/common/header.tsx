@@ -1,7 +1,7 @@
-import { NavBar } from './common/navBar';
-import { LogoBanner } from './common/logoBanner';
+import { NavBar } from './navBar';
+import { LogoBanner } from './logoBanner';
 import { useState } from 'react';
-import { mainNav } from '../data/data';
+import { mainNav } from '../../data/links';
 
 interface Props {
 	scrollDirection: string;

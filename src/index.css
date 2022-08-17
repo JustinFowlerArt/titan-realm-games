@@ -2,4 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {}
+@layer components {
+    html {
+        scroll-behavior: smooth;
+    }
+}

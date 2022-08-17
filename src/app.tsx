@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-import { Header } from './components/header';
+import { Header } from './components/common/header';
 import { Home } from './components/home';
-import { Footer } from './components/footer';
+import { Footer } from './components/common/footer';
+import { games } from './data/gamesInfo';
+import { GameDetail } from './components/gameDetail';
 
 export const App = () => {
 	const [lastScroll, setLastScroll] = useState(0);
@@ -31,7 +34,10 @@ export const App = () => {
 	return (
 		<div className='bg-gray-900 text-white'>
 			<Header scrollDirection={scrollDirection} />
-			<Home />
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='games/:slug' element={<GameDetail games={games} />} />
+			</Routes>
 			<Footer />
 		</div>
 	);
