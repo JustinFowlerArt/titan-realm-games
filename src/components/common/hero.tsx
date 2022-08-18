@@ -1,23 +1,25 @@
+import { H1 } from '../layout/h1';
+
 interface Props {
-	logo?: React.ReactNode;
-	title?: React.ReactNode;
+	title: React.ReactNode;
 	cover: string;
+	logo?: React.ReactNode;
+	links?: React.ReactNode;
 }
 
-export const Hero = ({ logo, title, cover }: Props) => {
+export const Hero = ({ title, cover, logo, links }: Props) => {
 	return (
 		<div
-			className='flex items-center justify-center w-full bg-cover bg-center'
+			className='flex items-center justify-center w-full bg-cover bg-center bg-gray-400 bg-blend-multiply lg:bg-top'
 			style={{
-				backgroundImage: `url(.${cover})`,
+				backgroundImage: `url(${cover})`,
 				minHeight: 'calc(100vh - 5rem)',
 			}}
 		>
-			<div className='flex flex-col items-center'>
+			<div className='flex flex-col items-center space-y-6'>
 				{logo}
-				<h1 className='text-2xl text-center font-bold text-titan-light-blue px-6 lg:text-5xl'>
-					{title}
-				</h1>
+				<H1>{title}</H1>
+				<div className='flex space-x-6'>{links}</div>
 			</div>
 		</div>
 	);

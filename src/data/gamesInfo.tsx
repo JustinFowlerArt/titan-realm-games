@@ -3,7 +3,8 @@ import { Game } from './types';
 export const games: Game[] = [
 	{
 		id: 0,
-		title: 'Wompy',
+		title: 'Wompy Idle',
+		tagline: 'Reach New Heights',
 		coverImage: './images/wompySplash.jpg',
 		description: [
 			'Wompatron 9000 is a handsome Robot Colossus who tires of his day-to-day grind and decides to vacation at the famed BCT Vertical Theme Park. When an army of evil Llamas takes over the park and steals his Golden Kitty prize, Wompy must launch himself to the top to confront the Llama bullies and find their leader to save his Golden Kitty.',
@@ -13,8 +14,27 @@ export const games: Game[] = [
 			{
 				title: 'Gift Shop',
 				description: 'Purchase upgrades to help Wompy reach new height',
+				image: './images/wompySplash.jpg',
+				backgroundImage: './images/wompySplash.jpg',
+			},
+			{
+				title: 'Gift Shop',
+				description: 'Purchase upgrades to help Wompy reach new height',
+				image: './images/wompySplash.jpg',
+				backgroundImage: './images/wompySplash.jpg',
+			},
+			{
+				title: 'Gift Shop',
+				description: 'Purchase upgrades to help Wompy reach new height',
+				image: './images/wompySplash.jpg',
+				backgroundImage: './images/wompySplash.jpg',
 			},
 		],
-		media: ['./images/wompySplash.jpg'],
+		media: [
+			{ image: './images/wompatron9000.jpg', url: '#' },
+			{ image: './images/wompatron9000.jpg', url: '#' },
+			{ image: './images/wompatron9000.jpg', url: '#' },
+			{ image: './images/wompatron9000.jpg', url: '#' },
+		],
 	},
 ];

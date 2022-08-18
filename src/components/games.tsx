@@ -1,16 +1,13 @@
 import { Carousel } from './common/carousel';
 import { gameSlides } from '../data/links';
+import { Section1Col } from './layout/section1Col';
+import { H2 } from './layout/h2';
 
 export const Games = () => {
 	return (
-		<div
-			id='games'
-			className='flex flex-col items-center w-full px-3 py-6 lg:px-6 xl:p-20'
-		>
-			<h2 className='text-3xl font-semibold text-titan-light-blue mb-6'>
-				Games
-			</h2>
+		<Section1Col>
+			<H2>Games</H2>
 			<Carousel slides={gameSlides} />
-		</div>
+		</Section1Col>
 	);
 };

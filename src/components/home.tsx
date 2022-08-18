@@ -1,7 +1,7 @@
 import { Hero } from './common/hero';
 import { Games } from './games';
 import { About } from './about';
-import { Main } from './common/main';
+import { Main } from './layout/main';
 import { LogoCompact } from './common/logoCompact';
 
 export const Home = () => {

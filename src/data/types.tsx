@@ -8,18 +8,21 @@ export type LinkInfo = {
 	url: string;
 };
 
+export type Feature = {
+	title: string;
+	description: string;
+	image: string;
+	backgroundImage: string;
+};
+
 export type Game = {
 	id: number;
 	price?: number;
 	title: string;
+	tagline: string;
 	coverImage: string;
 	description: string[];
 	features: Feature[];
 	buyLinks?: LinkInfo[];
-	media: string[];
-};
-
-type Feature = {
-	title: string;
-	description: string;
+	media: Slide[];
 };
