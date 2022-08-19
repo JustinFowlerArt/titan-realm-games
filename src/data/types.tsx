@@ -20,6 +20,7 @@ export type Game = {
 	tagline: string;
 	coverImage: string;
 	trailer: string;
+	mobile: boolean;
 	description: string[];
 	features: Feature[];
 	buyLinks: LinkInfo[];

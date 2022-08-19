@@ -6,6 +6,7 @@ export const games: Game[] = [
 		tagline: 'Reach New Heights',
 		coverImage: './images/wompySplash.jpg',
 		trailer: 'https://youtu.be/0A5owp32ULQ',
+		mobile: true,
 		description: [
 			'Wompatron 9000 is a handsome Robot Colossus who tires of his day-to-day grind and decides to vacation at the famed BCT Vertical Theme Park. When an army of evil Llamas takes over the park and steals his Golden Kitty prize, Wompy must launch himself to the top to confront the Llama bullies and find their leader to save his Golden Kitty.',
 			'As he ascends through the park attractions, Wompy punches the Llamas to extend his flight as he rescues Park Patronz and Tiny Kittenz, earning valuable Kitty Karma in the process. Between attempts, Wompy can spend earned Kitty Karma at the park gift Store to purchase powerful upgrades, bonus drops, and vanity items to help him reach new heights.',
@@ -43,6 +44,7 @@ export const games: Game[] = [
 		tagline: 'Sacrifices Must Be Made!',
 		coverImage: './images/lastKeyOfRobotica3.jpg',
 		trailer: '#',
+		mobile: false,
 		description: [
 			'Meet Paladin, the last surviving human brain on Terra. Your mission has been compromised and the forces of the Veil are converging on your position. In a last ditch effort to escape with the vital information you have secured, you are attempting to uploading your consciousness off world. However, the transcoding process is lengthy with your calculations alone.',
 			'Fortunately, you have discovered a flaw in the coding of a small number of enemy bots, allowing you to wrest control and focus their computation power on your transcoder. Be careful though, for your enemies are overwhelming and some of these Buddy Bots may need to be sacrificed to repair your exosuit or to rain fire on your enemies. Can you hold off long enough to complete the upload, or will humanity lose their last glimmer of hope?',
@@ -82,6 +84,7 @@ export const games: Game[] = [
 		tagline: 'Sacrifices Must Be Made!',
 		coverImage: './images/avarice.jpg',
 		trailer: '#',
+		mobile: false,
 		description: [
 			'Avarice is a game of timing, skill, and curses! Kill skeletons with sword and spell to collect gems that increase your score. But beware, many gems are cursed and will make you weaker, while your enemies grow in strength. How many can you collect before you succumb to your inevitable fate?',
 		],
@@ -112,6 +115,7 @@ export const games: Game[] = [
 		tagline: "Stumped by writer's block? Writer Unblocked can help!",
 		coverImage: './images/writerUnblocked.jpg',
 		trailer: '#',
+		mobile: false,
 		description: [
 			'Ranging from serious to hilarious, these randomly generated writing exercises will get your creative juices flowing! Features four different types of prompts and over 250,000 possible combinations.',
 		],

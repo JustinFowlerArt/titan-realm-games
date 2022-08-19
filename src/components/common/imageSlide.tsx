@@ -13,7 +13,7 @@ export const ImageSlide = ({ slide }: Props) => {
 	return (
 		<Link
 			to={slide.url}
-			className='w-full aspect-[4/3] transition-all bg-cover bg-center hover:bg-blend-multiply hover:bg-gray-400'
+			className='w-full aspect-video transition-all bg-cover bg-center hover:bg-blend-multiply hover:bg-gray-400'
 			style={styles}
 		></Link>
 	);

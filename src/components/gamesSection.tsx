@@ -7,7 +7,7 @@ export const GamesSection = () => {
 	return (
 		<Section1Col>
 			<H2>Games</H2>
-			<Carousel slides={gameSlides} />
+			<Carousel slides={gameSlides} cols={3} />
 		</Section1Col>
 	);
 };

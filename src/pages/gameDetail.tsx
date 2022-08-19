@@ -9,6 +9,7 @@ import { Main } from '../components/layout/main';
 import { Section1Col } from '../components/layout/section1Col';
 import { Section2ColFull } from '../components/layout/section2ColFull';
 import { PageNotFound } from './pageNotFound';
+import { FeatureImage } from '../components/featureImage';
 
 interface Props {
 	games: Game[];
@@ -60,21 +61,21 @@ export const GameDetail = ({ games }: Props) => {
 						(i + 1) % 2 === 1 ? (
 							<Section2ColFull
 								key={i}
-								left={<img src={feature.image} />}
-								right={<FeatureDetail feature={feature} />}
+								left={<FeatureImage feature={feature} mobile={game.mobile} />}
+								right={<FeatureDetail feature={feature} mobile={game.mobile} />}
 							/>
 						) : (
 							<Section2ColFull
 								key={i}
-								left={<FeatureDetail feature={feature} />}
-								right={<img src={feature.image} />}
+								left={<FeatureDetail feature={feature} mobile={game.mobile} />}
+								right={<FeatureImage feature={feature} mobile={game.mobile} />}
 								flip={true}
 							/>
 						)
 					)}
 					<Section1Col>
 						<H2>Media</H2>
-						<Carousel slides={game.media} />
+						<Carousel slides={game.media} lightbox={true} />
 					</Section1Col>
 				</Main>
 			) : (
