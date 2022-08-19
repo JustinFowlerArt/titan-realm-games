@@ -1,5 +1,5 @@
-import { Feature } from '../data/types';
-import { H2 } from './common/h2';
+import { Feature } from '../../data/types';
+import { H2 } from '../common/h2';
 
 interface Props {
 	feature: Feature;

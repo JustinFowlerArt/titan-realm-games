@@ -33,10 +33,10 @@ export const games: Game[] = [
 		],
 		buyLinks: [{ title: 'Buy Now', url: '#' }],
 		media: [
-			{ image: './images/games/wompyGameplay1.jpg', url: '#' },
-			{ image: './images/games/wompyGameplay2.jpg', url: '#' },
-			{ image: './images/games/wompyGiftShop.jpg', url: '#' },
-			{ image: './images/games/wompyMainMenu.jpg', url: '#' },
+			{ image: './images/games/wompyGameplay1.jpg' },
+			{ image: './images/games/wompyGameplay2.jpg' },
+			{ image: './images/games/wompyGiftShop.jpg' },
+			{ image: './images/games/wompyMainMenu.jpg' },
 		],
 	},
 	{
@@ -73,10 +73,10 @@ export const games: Game[] = [
 		],
 		buyLinks: [{ title: 'Buy Now', url: '#' }],
 		media: [
-			{ image: './images/games/lastKey1.jpg', url: '#' },
-			{ image: './images/games/lastKey2.jpg', url: '#' },
-			{ image: './images/games/lastKey3.jpg', url: '#' },
-			{ image: './images/games/lastKeyMenu.jpg', url: '#' },
+			{ image: './images/games/lastKey1.jpg' },
+			{ image: './images/games/lastKey2.jpg' },
+			{ image: './images/games/lastKey3.jpg' },
+			{ image: './images/games/lastKeyMenu.jpg' },
 		],
 	},
 	{
@@ -105,9 +105,9 @@ export const games: Game[] = [
 		],
 		buyLinks: [{ title: 'Buy Now', url: '#' }],
 		media: [
-			{ image: './images/games/avarice1.jpg', url: '#' },
-			{ image: './images/games/avarice2.jpg', url: '#' },
-			{ image: './images/games/avariceUi.jpg', url: '#' },
+			{ image: './images/games/avarice1.jpg' },
+			{ image: './images/games/avarice2.jpg' },
+			{ image: './images/games/avariceUi.jpg' },
 		],
 	},
 	{
@@ -137,9 +137,9 @@ export const games: Game[] = [
 		],
 		buyLinks: [{ title: 'Buy Now', url: '#' }],
 		media: [
-			{ image: './images/writerUnblocked.jpg', url: '#' },
-			{ image: './images/games/writerUnblocked1.jpg', url: '#' },
-			{ image: './images/games/writerUnblocked2.jpg', url: '#' },
+			{ image: './images/writerUnblocked.jpg' },
+			{ image: './images/games/writerUnblocked1.jpg' },
+			{ image: './images/games/writerUnblocked2.jpg' },
 		],
 	},
 ];

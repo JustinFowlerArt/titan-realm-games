@@ -1,4 +1,4 @@
-import { Feature } from '../data/types';
+import { Feature } from '../../data/types';
 
 interface Props {
 	feature: Feature;

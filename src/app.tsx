@@ -7,6 +7,7 @@ import { Footer } from './components/common/footer';
 import { games } from './data/gamesInfo';
 import { GameDetail } from './pages/gameDetail';
 import { PageNotFound } from './pages/pageNotFound';
+import { ScrollToTop } from './utils/scrollToTop';
 
 export const App = () => {
 	const [lastScroll, setLastScroll] = useState(0);
@@ -35,11 +36,13 @@ export const App = () => {
 	return (
 		<div className='bg-gray-900 text-white'>
 			<Header scrollDirection={scrollDirection} />
-			<Routes>
-				<Route path='/' element={<Home />} />
-				<Route path='games/:slug' element={<GameDetail games={games} />} />
-				<Route path='*' element={<PageNotFound />} />
-			</Routes>
+			<ScrollToTop>
+				<Routes>
+					<Route path='/' element={<Home />} />
+					<Route path='games/:slug' element={<GameDetail games={games} />} />
+					<Route path='*' element={<PageNotFound />} />
+				</Routes>
+			</ScrollToTop>
 			<Footer />
 		</div>
 	);

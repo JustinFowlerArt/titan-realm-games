@@ -1,6 +1,6 @@
 export type Slide = {
 	image: string;
-	url: string;
+	url?: string;
 };
 
 export type LinkInfo = {

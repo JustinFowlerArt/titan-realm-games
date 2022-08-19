@@ -7,9 +7,15 @@ interface Props {
 	slides: Slide[];
 	cols?: number;
 	lightbox?: boolean;
+	mobile?: boolean;
 }
 
-export const Carousel = ({ slides, cols = 1, lightbox = false }: Props) => {
+export const Carousel = ({
+	slides,
+	cols = 1,
+	lightbox = false,
+	mobile = false,
+}: Props) => {
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 	const [open, setOpen] = useState(false);
 
@@ -63,21 +69,29 @@ export const Carousel = ({ slides, cols = 1, lightbox = false }: Props) => {
 			} ${cols === 1 ? 'lg:w-3/4' : ''} `}
 		>
 			{open && lightbox && (
-				<div className='absolute top-6 right-6'>
+				<div className='absolute top-6 right-3 lg:right-6 xl:right-20'>
 					<Icon glyph='&times;' handleClick={() => setOpen(!open)} />
 				</div>
 			)}
 			<Icon glyph='&#10141;' handleClick={previousSlide} direction='left' />
 			<div className='flex w-full justify-between p-3 lg:p-6 lg:space-x-6'>
 				<div className='flex h-full w-full' onClick={() => setOpen(!open)}>
-					<ImageSlide slide={slides[currentImageIndex]} />
+					<ImageSlide
+						slide={slides[currentImageIndex]}
+						open={open}
+						mobile={mobile}
+					/>
 				</div>
 				{cols > 1 && (
 					<div
 						className='hidden h-full w-full lg:flex'
 						onClick={() => setOpen(!open)}
 					>
-						<ImageSlide slide={slides[returnSlide(1)]} />
+						<ImageSlide
+							slide={slides[returnSlide(1)]}
+							open={open}
+							mobile={mobile}
+						/>
 					</div>
 				)}
 
@@ -86,7 +100,11 @@ export const Carousel = ({ slides, cols = 1, lightbox = false }: Props) => {
 						className='hidden h-full w-full xl:flex'
 						onClick={() => setOpen(!open)}
 					>
-						<ImageSlide slide={slides[returnSlide(2)]} />
+						<ImageSlide
+							slide={slides[returnSlide(2)]}
+							open={open}
+							mobile={mobile}
+						/>
 					</div>
 				)}
 			</div>

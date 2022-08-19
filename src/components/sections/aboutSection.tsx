@@ -1,6 +1,6 @@
-import { LinkButton } from './common/linkButton';
-import { H2 } from './common/h2';
-import { Section2Col } from './layout/section2Col';
+import { LinkButton } from '../common/linkButton';
+import { H2 } from '../common/h2';
+import { Section2Col } from '../layout/section2Col';
 
 export const AboutSection = () => {
 	return (

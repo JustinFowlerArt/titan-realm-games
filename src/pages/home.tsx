@@ -1,6 +1,6 @@
 import { Hero } from '../components/common/hero';
-import { GamesSection } from '../components/gamesSection';
-import { AboutSection } from '../components/aboutSection';
+import { GamesSection } from '../components/sections/gamesSection';
+import { AboutSection } from '../components/sections/aboutSection';
 import { Main } from '../components/layout/main';
 import { LogoCompact } from '../components/common/logoCompact';
 

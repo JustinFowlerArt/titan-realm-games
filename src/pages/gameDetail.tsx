@@ -3,13 +3,13 @@ import { useParams } from 'react-router-dom';
 import { Game } from '../data/types';
 import { Carousel } from '../components/common/carousel';
 import { Hero } from '../components/common/hero';
-import { FeatureDetail } from '../components/featureDetail';
+import { FeatureDetail } from '../components/sections/featureDetail';
 import { H2 } from '../components/common/h2';
 import { Main } from '../components/layout/main';
 import { Section1Col } from '../components/layout/section1Col';
 import { Section2ColFull } from '../components/layout/section2ColFull';
 import { PageNotFound } from './pageNotFound';
-import { FeatureImage } from '../components/featureImage';
+import { FeatureImage } from '../components/sections/featureImage';
 
 interface Props {
 	games: Game[];
@@ -75,7 +75,11 @@ export const GameDetail = ({ games }: Props) => {
 					)}
 					<Section1Col>
 						<H2>Media</H2>
-						<Carousel slides={game.media} lightbox={true} />
+						<Carousel
+							slides={game.media}
+							lightbox={true}
+							mobile={game.mobile}
+						/>
 					</Section1Col>
 				</Main>
 			) : (
