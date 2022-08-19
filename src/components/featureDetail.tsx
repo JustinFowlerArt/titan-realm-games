@@ -1,5 +1,5 @@
 import { Feature } from '../data/types';
-import { H2 } from './layout/h2';
+import { H2 } from './common/h2';
 
 export const FeatureDetail = ({ feature }: { feature: Feature }) => {
 	return (

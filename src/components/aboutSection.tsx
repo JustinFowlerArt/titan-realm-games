@@ -1,8 +1,8 @@
 import { LinkButton } from './common/linkButton';
-import { H2 } from './layout/h2';
+import { H2 } from './common/h2';
 import { Section2Col } from './layout/section2Col';
 
-export const About = () => {
+export const AboutSection = () => {
 	return (
 		<Section2Col
 			left={

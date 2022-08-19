@@ -44,7 +44,7 @@ export default {
 		}),
 
 		new CopyPlugin({
-			patterns: [{ from: 'src/img', to: 'images' }],
+			patterns: [{ from: 'src/images', to: 'images' }],
 		}),
 
 		new ForkTsCheckerWebpackPlugin({

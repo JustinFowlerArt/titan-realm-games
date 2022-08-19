@@ -16,13 +16,12 @@ export type Feature = {
 };
 
 export type Game = {
-	id: number;
-	price?: number;
 	title: string;
 	tagline: string;
 	coverImage: string;
+	trailer: string;
 	description: string[];
 	features: Feature[];
-	buyLinks?: LinkInfo[];
+	buyLinks: LinkInfo[];
 	media: Slide[];
 };

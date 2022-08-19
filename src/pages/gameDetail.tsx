@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Game } from '../data/types';
-import { Carousel } from './common/carousel';
-import { Hero } from './common/hero';
-import { LinkButton } from './common/linkButton';
-import { FeatureDetail } from './featureDetail';
-import { H2 } from './layout/h2';
-import { Main } from './layout/main';
-import { Section1Col } from './layout/section1Col';
-import { Section2ColFull } from './layout/section2ColFull';
+import { Carousel } from '../components/common/carousel';
+import { Hero } from '../components/common/hero';
+import { FeatureDetail } from '../components/featureDetail';
+import { H2 } from '../components/common/h2';
+import { Main } from '../components/layout/main';
+import { Section1Col } from '../components/layout/section1Col';
+import { Section2ColFull } from '../components/layout/section2ColFull';
+import { PageNotFound } from './pageNotFound';
 
 interface Props {
 	games: Game[];
@@ -24,28 +24,29 @@ export const GameDetail = ({ games }: Props) => {
 			if (game?.title === slug) return;
 			setGame(
 				games.find(game => {
-					return game.title.toLowerCase().includes(slug.toLowerCase());
+					return game.title
+						.toLowerCase()
+						.replace(/ /g, '')
+						.includes(slug.toLowerCase());
 				})
 			);
 		}
 	}, [games, slug, game]);
 
 	return (
-		<Main>
-			{game && (
-				<>
+		<>
+			{game ? (
+				<Main>
 					<Hero
 						title={game.title}
 						cover={game.coverImage}
-						links={
-							<>
-								<LinkButton link={{ title: 'Buy Now', url: '#' }} />
-								<LinkButton
-									link={{ title: 'Watch Trailer', url: '#' }}
-									glyph='&#10141;'
-								/>
-							</>
-						}
+						links={[
+							{
+								title: `${game.buyLinks[0].title}`,
+								url: `${game.buyLinks[0].url}`,
+							},
+							{ title: 'Watch Trailer', url: `${game.trailer}` },
+						]}
 					/>
 					<Section1Col>
 						<div className='space-y-6 text-center w-2/3'>
@@ -75,8 +76,10 @@ export const GameDetail = ({ games }: Props) => {
 						<H2>Media</H2>
 						<Carousel slides={game.media} />
 					</Section1Col>
-				</>
+				</Main>
+			) : (
+				<PageNotFound />
 			)}
-		</Main>
+		</>
 	);
 };

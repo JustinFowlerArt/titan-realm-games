@@ -6,7 +6,7 @@ interface Props {
 
 export const Section2ColFull = ({ left, right, flip }: Props) => {
 	return (
-		<section className='flex flex-col items-center w-full h-fit lg:flex-row'>
+		<section className='flex flex-col items-center w-full h-fit lg:flex-row last:mb-20'>
 			<div
 				className={`w-full aspect-video lg:w-1/2 lg:order-2 ${
 					flip ? 'order-2' : ''

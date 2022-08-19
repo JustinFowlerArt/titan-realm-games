@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { Header } from './components/common/header';
-import { Home } from './components/home';
+import { Home } from './pages/home';
 import { Footer } from './components/common/footer';
 import { games } from './data/gamesInfo';
-import { GameDetail } from './components/gameDetail';
+import { GameDetail } from './pages/gameDetail';
+import { PageNotFound } from './pages/pageNotFound';
 
 export const App = () => {
 	const [lastScroll, setLastScroll] = useState(0);
@@ -37,6 +38,7 @@ export const App = () => {
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='games/:slug' element={<GameDetail games={games} />} />
+				<Route path='*' element={<PageNotFound />} />
 			</Routes>
 			<Footer />
 		</div>
