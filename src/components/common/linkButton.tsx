@@ -8,7 +8,7 @@ interface Props {
 
 export const LinkButton = ({ link, glyph }: Props) => {
     const isExternalLink = (url: string) => {
-        return url.startsWith('http');
+        return url.startsWith('http') || url.startsWith('mailto');
     };
 
     return (

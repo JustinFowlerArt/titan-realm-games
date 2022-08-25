@@ -10,6 +10,8 @@ import { PageNotFound } from './pages/pageNotFound';
 import { ScrollToTop } from './utils/scrollToTop';
 import { About } from './pages/about';
 import { Games } from './pages/games';
+import { Contact } from './pages/contact';
+import { Career } from './pages/career';
 
 export const App = () => {
     const [lastScroll, setLastScroll] = useState(0);
@@ -43,6 +45,8 @@ export const App = () => {
                     <Route path='/' element={<Home />} />
                     <Route path='about' element={<About />} />
                     <Route path='games' element={<Games games={games} />} />
+                    <Route path='career' element={<Career />} />
+                    <Route path='contact' element={<Contact />} />
                     <Route
                         path='games/:slug'
                         element={<GameDetail games={games} />}

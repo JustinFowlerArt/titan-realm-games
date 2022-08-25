@@ -7,12 +7,13 @@ interface Props {
     cover?: string;
     links?: LinkInfo[];
     logo?: React.ReactNode;
+    className?: string;
 }
 
-export const Hero = ({ title, cover, logo, links }: Props) => {
+export const Hero = ({ title, cover, logo, links, className }: Props) => {
     return (
         <div
-            className={`flex items-center justify-center w-full bg-cover bg-center lg:bg-top ${
+            className={`flex items-center justify-center w-full bg-cover bg-center lg:bg-top ${className} ${
                 cover ? 'bg-gray-400 bg-blend-multiply' : ''
             }`}
             style={{
