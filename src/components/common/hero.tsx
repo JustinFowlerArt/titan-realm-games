@@ -11,15 +11,17 @@ interface Props {
 }
 
 export const Hero = ({ title, cover, logo, links, className }: Props) => {
+    let styles = { minHeight: 'calc(100vh - 5rem)' };
+    if (cover) {
+        styles = Object.assign(styles, { backgroundImage: `url(${cover})` });
+    }
+
     return (
         <div
             className={`flex items-center justify-center w-full bg-cover bg-center lg:bg-top ${className} ${
                 cover ? 'bg-gray-400 bg-blend-multiply' : ''
             }`}
-            style={{
-                backgroundImage: `url(${cover})`,
-                minHeight: 'calc(100vh - 5rem)',
-            }}
+            style={styles}
         >
             <div className='flex flex-col items-center space-y-6'>
                 {logo}

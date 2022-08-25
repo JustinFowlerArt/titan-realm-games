@@ -63,6 +63,7 @@ export const GameDetail = ({ games }: Props) => {
                         {game.features.map((feature, i) =>
                             (i + 1) % 2 === 1 ? (
                                 <Grid
+                                    key={i}
                                     className={`!gap-0 ${
                                         game.mobile ? 'grid-cols-2' : ''
                                     }`}
@@ -78,6 +79,7 @@ export const GameDetail = ({ games }: Props) => {
                                 </Grid>
                             ) : (
                                 <Grid
+                                    key={i}
                                     className={`!gap-0 ${
                                         game.mobile ? 'grid-cols-2' : ''
                                     }`}
